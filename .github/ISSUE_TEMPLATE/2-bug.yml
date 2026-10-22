@@ -1,0 +1,26 @@
+name: 버그
+description: 동작이 이상하거나 계약과 다름
+title: "[버그] "
+labels: ["type:버그"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: 무슨 일이
+      description: 기대한 것 vs 실제
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 재현 방법
+      value: |
+        1.
+        2.
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 환경 · 로그
+      description: 브랜치/커밋, 기기, 에러 메시지. 실제 데이터 값은 쓰지 말 것

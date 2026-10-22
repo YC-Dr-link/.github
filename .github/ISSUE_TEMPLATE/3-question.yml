@@ -1,0 +1,27 @@
+name: 질문 · 계약 변경
+description: 팀 안 질문, 연구원님께 물어볼 것, API·QR·모듈 계약 변경 제안 (ktl-hub에 올리기)
+title: "[질문] "
+labels: ["질문"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 종류
+      options: ["팀 안 질문", "연구원님께 물어볼 것", "계약 변경 제안"]
+    validations:
+      required: true
+  - type: textarea
+    id: q
+    attributes:
+      label: 질문 / 제안
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: 답이 없으면 막히는 것
+      description: 어느 이슈가, 언제까지 답이 필요한지
+  - type: textarea
+    id: temp
+    attributes:
+      label: 답이 오기 전 임시 진행안

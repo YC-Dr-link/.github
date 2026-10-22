@@ -1,0 +1,47 @@
+name: 작업
+description: 만들 기능·할 일 하나 (하루~이틀 크기)
+title: "[작업] "
+labels: ["type:기능"]
+body:
+  - type: input
+    id: req
+    attributes:
+      label: 요구사항 ID
+      description: ktl-hub/docs/01-요구사항명세.md 의 ID (없으면 "없음")
+      placeholder: REQ-B1-03
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 무엇을
+      description: 이 이슈에서 만들 것
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 완료 기준
+      description: 이것이 되면 끝 (체크리스트)
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options: ["필수 (M)", "권장 (S)", "2차 (C)"]
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: 크기
+      options: ["S (반나절)", "M (하루)", "L (이틀)"]
+  - type: textarea
+    id: notes
+    attributes:
+      label: 참고
+      description: 관련 화면 ID, API, 다른 이슈
